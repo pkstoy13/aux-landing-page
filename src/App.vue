@@ -1,16 +1,16 @@
 <script setup lang="ts">
 //import { /*RouterLink,*/ RouterView } from 'vue-router'
 //import HelloWorld from './components/HelloWorld.vue'
-import TheNavbar from './components/TheNavbar.vue'
-
-
+import AuxNavbar from './components/AuxNavbar.vue'
+import AuxEmailForm from './components/AuxEmailForm.vue'
 </script>
 
 <template>
   <header>
     <!--<img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" /> -->
     <div class="wrapper">
-      <TheNavbar/>
+      <AuxNavbar />
+      <AuxEmailForm />
       <!--<HelloWorld msg="You did it!" /> -->
 
       <!--
@@ -18,39 +18,38 @@ import TheNavbar from './components/TheNavbar.vue'
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/about">About</RouterLink>
       </nav>
-    -->
-    </div>
+    --></div>
   </header>
 
   <!--<RouterView />-->
 </template>
 
 <style scoped>
+@font-face {
+  font-family: 'Inconsolata-Light';
+  src: url('./assets/Inconsolata-Light.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 
-  @font-face {
-    font-family: 'Oxanium';
-    src: url('./assets/Oxanium-VariableFont_wght.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-  }
-
-  * {
-    font-family: Oxanium;
-  }
-
+* {
+  font-family: Inconsolata-Light;
+}
 </style>
 
 <style>
 /* GLOBAL STYLES (not scoped) */
 body {
-  background-image: url('./assets/aux-background.svg');
+  background-image: url('./assets/aux-bg.svg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  animation: bgMove 5s ease-in-out infinite alternate;
+  background-color: black;
+  animation: bgMove 10s ease-in-out infinite alternate;
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+  height: 100vh;
 }
 
 @keyframes bgMove {
@@ -64,5 +63,4 @@ body {
     background-position: 0% 100%;
   }
 }
-
 </style>
